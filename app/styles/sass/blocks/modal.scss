@@ -1,0 +1,78 @@
+.modal {
+    z-index: 100;
+    position: absolute;
+    font-family: 'raleway', sans-serif;
+
+    &__container {
+        background-color: lighten($color: $deep, $amount: 6);
+        border-radius: 0;
+        box-shadow: 0 0 0 8px rgba(#fff, 0.12);
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        display: block;
+        width: 100%;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'oswald', sans-serif;
+        font-weight: 500;
+    }
+
+    &__close {
+        color: #fff;
+        opacity: 0.25;
+        transition: opacity 0.25s ease-in;
+        will-change: opacity;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__input {
+        margin-bottom: 8px;
+    }
+
+    &__footer {
+        text-align: center;
+    }
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: auto;
+}
+
+.form-input {
+    display: block;
+    background-color: $dark;
+    border: 1px solid lighten($color: $dark, $amount: 7);
+    padding: 12px 18px;
+    min-width: 280px;
+    color: #fff;
+    font-size: 15px;
+    transition: border 0.25s ease-in;
+
+    &:focus {
+        border: 1px solid lighten($color: $dark, $amount: 20);
+    }
+}
+
+.form-input-tel {
+    font-family: 'oswald', sans-serif;
+    font-weight: 500;
+
+    &::placeholder {
+        font-family: 'raleway', sans-serif;
+        font-weight: 400;
+    }
+}
+
+textarea.form-input {
+    min-height: 100px;
+    margin-bottom: 0;
+}
