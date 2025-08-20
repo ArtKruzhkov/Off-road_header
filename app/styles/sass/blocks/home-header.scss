@@ -14,13 +14,9 @@ p {
 }
 
 .top-line {
-    // position: absolute;
-
     position: relative;
-
     width: 100%;
     height: $size;
-    // top: 0;
     border-bottom: 1px solid rgba(#fff, $border-opacity);
     z-index: 5;
     background-color: $deep;
@@ -42,6 +38,10 @@ p {
             position: relative;
             top: -4px;
         }
+
+        @media(max-width: 1299.98px) {
+            display: none;
+        }
     }
 
     &__contacts {
@@ -54,11 +54,32 @@ p {
         font-weight: 500;
         letter-spacing: 0.4em;
         color: rgba(#fff, 0.5);
+
+        @include media-breakpoint-down(xl) {
+            flex-direction: column;
+            font-size: 8px;
+            gap: 4px;
+        }
+    }
+
+    &__address {
+        @include media-breakpoint-down(lg) {
+            min-width: 432px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 
     &__number-wrapper {
         padding-right: 18px;
         border-right: 1px solid rgba(#fff, 0.2);
+
+        @include media-breakpoint-down(xl) {
+            border-right: none;
+            padding-right: 0;
+        }
     }
 
     &__number,
@@ -75,10 +96,14 @@ p {
     &__number {
         color: $accent;
     }
+
+    @include media-breakpoint-down(md) {
+        height: $size-sm;
+    }
 }
 
 .logo {
-    flex: 0 0 200px;
+    flex: 0 0 204px;
     display: flex;
     align-items: center;
     color: #fff;
@@ -94,20 +119,44 @@ p {
         color: $accent;
     }
 
+    @include media-breakpoint-down(lg) {
+        min-width: auto;
+        flex: 1 0 0;
+    }
+
     &__img-wrapper {
         width: $size;
         height: $size;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include media-breakpoint-down(md) {
+            height: $size-sm;
+            width: $size-sm;
+        }
+    }
+
+    &__text {
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 }
 
 .menu-btn-container {
-    flex: 0 0 200px;
+    flex: 0 0 204px;
     text-align: right;
     position: relative;
     height: $size;
+
+    @include media-breakpoint-down(lg) {
+        flex: 1 0 0;
+    }
+
+    @include media-breakpoint-down(md) {
+        height: $size-sm;
+    }
 }
 
 .menu-btn {
@@ -126,10 +175,19 @@ p {
     &:hover {
         background-color: $accent;
     }
+
+    @include media-breakpoint-down(md) {
+        height: $size-sm;
+        width: $size-sm;
+    }
 }
 
 .home-header__content {
     height: calc(100% - $size);
+
+    @include media-breakpoint-down(md) {
+        height: calc(100% - $size-sm);
+    }
 }
 
 .home-aside {
@@ -150,10 +208,19 @@ p {
         width: 100%;
         background-repeat: no-repeat;
         background-position: center;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 
     &__soc {
         flex: 1 0 0;
+
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__share-icon {
@@ -165,6 +232,16 @@ p {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
+
+        @include media-breakpoint-down(md) {
+            width: $size-sm;
+            flex: 0 0 $size-sm;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        height: calc(100% - $size-sm);
+        width: $size-sm;
     }
 }
 
@@ -205,6 +282,10 @@ p {
     height: 100%;
     overflow: hidden;
     position: relative;
+
+    @include media-breakpoint-down(md) {
+        padding-left: $size-sm;
+    }
 }
 
 .slider-text {
@@ -212,6 +293,10 @@ p {
     z-index: 3;
     width: 100%;
     height: calc(100% - $size);
+
+    @include media-breakpoint-down(md) {
+        height: calc(100% - $size-sm);
+    }
 
     &__slide {
         display: flex;
@@ -225,6 +310,10 @@ p {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @include media-breakpoint-down(md) {
+            padding-left: 4%;
+        }
     }
 
     &__header {
@@ -233,6 +322,20 @@ p {
         line-height: 120%;
         font-family: 'oswald', sans-serif;
         max-width: 780px;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 52px;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            font-size: 35px;
+            max-width: 500px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+        }
 
         span {
             color: $accent;
@@ -245,6 +348,10 @@ p {
         font-size: 13px;
         font-weight: 500;
         margin-top: 15px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 11px;
+        }
     }
 
     &__button {
@@ -257,6 +364,10 @@ p {
     width: 75%;
     overflow: hidden;
     position: relative;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
 
     &::before {
         content: '';
@@ -290,6 +401,12 @@ p {
     display: flex;
     align-items: center;
     z-index: 3;
+
+    @include media-breakpoint-down(md) {
+        height: $size-sm;
+        left: $size-sm;
+        width: 100%;
+    }
 }
 
 .slider-share {
@@ -311,6 +428,11 @@ p {
             border-right: 3px solid $accent;
         }
 
+        @include media-breakpoint-down(md) {
+            height: $size-sm;
+            width: $size-sm;
+        }
+
     }
 }
 
@@ -321,6 +443,14 @@ p {
     align-items: center;
     height: $size;
     position: relative;
+
+    @include media-breakpoint-down(md) {
+        height: $size-sm;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 
     .swiper-pagination {
         position: static;
@@ -356,6 +486,10 @@ p {
     flex: 1 0 0;
     position: relative;
 
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+
     .swiper-scrollbar {
         position: static;
         background-color: rgba(#fff, 0.2);
@@ -380,6 +514,12 @@ p {
     align-items: center;
     justify-content: center;
     left: 10px;
+
+    @include media-breakpoint-down(sm) {
+        left: 10px;
+        justify-content: flex-start;
+        flex: 1 0 0;
+    }
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -416,6 +556,10 @@ p {
     right: calc(23.5% - 240px);
     transform: translateY(-57%);
     z-index: 1;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
 }
 
 .slider-pagination-count {
@@ -429,6 +573,15 @@ p {
     font-size: 24px;
     z-index: 5;
     text-align: right;
+
+    @include media-breakpoint-down(md) {
+        right: 58px;
+        transform: scale(0.7);
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 
     .current {
         font-size: 40px;
@@ -446,6 +599,16 @@ p {
     font-size: 100px;
     color: $deep;
     -webkit-text-stroke: 1px #7f7f7f;
+    z-index: 5;
+
+    @include media-breakpoint-down(lg) {
+        font-size: 62px;
+        bottom: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
 
     &__dot {
         color: $accent;
@@ -477,13 +640,6 @@ p {
         transition: width 0.5s ease;
         will-change: width;
     }
-
-    // &:hover,
-    // &:focus {
-    //     &::before {
-    //         width: 100%;
-    //     }
-    // }
 
     &:hover {
         &::before {

@@ -1,0 +1,31 @@
+#cursor {
+    position: fixed;
+    width: 17px;
+    height: 17px;
+    background-color: $accent;
+    z-index: 20;
+    border-radius: 100%;
+    user-select: none;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33),
+        background-color 0.4s ease,
+        border-color 0.4s ease;
+
+
+
+    &.active {
+        transform: translate(-50%, -50%) scale(3.4);
+        background-color: rgba(#fff, 0.1);
+        border-color: $accent;
+    }
+
+    &.hidden {
+        transform: translate(-50%, -50%) scale(0.001);
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
