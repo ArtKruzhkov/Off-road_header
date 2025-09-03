@@ -7,9 +7,6 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
-# Build
-dist/
-build/
 
 # IDE/OS
 .vscode/
