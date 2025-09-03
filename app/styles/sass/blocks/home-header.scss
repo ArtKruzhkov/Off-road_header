@@ -167,7 +167,8 @@ p {
     height: $size;
     cursor: pointer;
     background-color: #3c3c3c;
-    background-image: url(../../../images/dist/bars-solid.svg);
+    // background-image: url(../../../images/dist/bars-solid.svg);
+    background-image: url('../images/dist/bars-solid.svg');
     background-repeat: no-repeat;
     background-position: center;
     transition: background-color 0.3s ease;
@@ -204,7 +205,8 @@ p {
 
     &__decoration {
         flex: 1 0 0;
-        background-image: url(../../../images/dist/decoration.svg);
+        // background-image: url(../../../images/dist/decoration.svg);
+        background-image: url('../images/dist/decoration.svg');
         width: 100%;
         background-repeat: no-repeat;
         background-position: center;
@@ -227,7 +229,8 @@ p {
         background-color: $accent;
         width: $size;
         flex: 0 0 $size;
-        background-image: url(../../../images/dist/share-solid.svg);
+        // background-image: url(../../../images/dist/share-solid.svg);
+        background-image: url('../images/dist/share-solid.svg');
         background-size: 18px;
         background-repeat: no-repeat;
         background-position: center;
@@ -549,7 +552,8 @@ p {
     width: 480px;
     height: 480px;
     position: absolute;
-    background-image: url(../../../images/dist/gear.svg);
+    // background-image: url(../../../images/dist/gear.svg);
+    background-image: url('../images/dist/gear.svg');
     background-size: cover;
     background-position: center;
     top: 50%;
